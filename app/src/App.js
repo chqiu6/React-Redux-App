@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GhibiMovie from "./components/GhibiMovie";
+// import {connect} from "react-redux";
+// import {getGhibiApi} from "./actions/action";
+import axios from "axios";
 
 function App() {
+  //testing our api link 
+  // axios
+  // .get("https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe")
+  // .then(res => {
+  //   console.log("testing api : ", res.data);
+  // })
+  // .catch(err => {
+  //   console.log("we've failed :", err);
+  // })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p> hi </p>
+      <GhibiMovie />
     </div>
   );
 }
-
+// const mapStateToProps = state => { 
+//   return {
+//       loading : state.false, 
+//       ghibiList : state.ghibiList,
+//       errors : state.errors
+//   }
+// }
+// export default connect(mapStateToProps,{getGhibiApi})(App);
 export default App;
